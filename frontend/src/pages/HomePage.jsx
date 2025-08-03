@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useProductStore } from "../store/product";
 import ProductCard from "../components/ProductCard";
 import { useEffect } from "react";
-import ProductsButton from "../components/ProductsButton";
+import ProductsResetButton from "../components/ProductsResetButton";
 
 const HomePage = () => {
   const { fetchProducts, products } = useProductStore();
@@ -31,7 +31,7 @@ const HomePage = () => {
           ))}
         </SimpleGrid>
 
-        <ProductsButton />
+        <ProductsResetButton />
 
         {products.length === 0 && (
           <Text
